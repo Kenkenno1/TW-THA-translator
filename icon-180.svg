@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <defs>
+    <linearGradient id="pl" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EDE4D0"/>
+      <stop offset="100%" stop-color="#B8A67A"/>
+    </linearGradient>
+    <filter id="fl">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#D4C09A" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- 琉璃紺底色 -->
+  <rect width="180" height="180" fill="#0C1926"/>
+
+  <!-- 兩道幾何摺紙線條交疊：180° 旋轉對稱 -->
+  <g filter="url(#fl)" stroke="url(#pl)" stroke-width="3" stroke-linecap="square" fill="none">
+    <!-- 上方 L 形 -->
+    <path d="M55,35 L55,100 L135,100"/>
+    <!-- 下方 L 形（180° 對稱） -->
+    <path d="M125,145 L125,80 L45,80"/>
+  </g>
+</svg>
