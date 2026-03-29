@@ -1187,7 +1187,8 @@
                 || voices.find(v => v.lang === localLang)
                 || voices.find(v => v.lang.startsWith(localLang.split('-')[0]) && v.name.includes('Google'))
                 || voices.find(v => v.lang.startsWith(localLang.split('-')[0]));
-      if (best) u.voice = best;
+      if (!best) throw new Error('No voice for ' + localLang);
+      u.voice = best;
       speechSynthesis.speak(u);
       return u;
     }
